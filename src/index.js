@@ -26,6 +26,8 @@ function removeProduct(event) {
   const target = event.currentTarget.parentNode.parentNode;
   target.remove()
 
+  calculateAll()
+
   // Is this a good practice?
   // target.parentNode.removeChild(target)
 }
