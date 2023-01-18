@@ -38,7 +38,9 @@ function createProduct() {
   const table = document.querySelector("tbody")
 
   let nameFromInput = document.querySelector(".create-product td:nth-child(1) input").value
-  let priceFromInput = document.querySelector(".create-product td:nth-child(2) input").value
+  if (nameFromInput === "") nameFromInput = "No name"
+
+  let priceFromInput = parseFloat(document.querySelector(".create-product td:nth-child(2) input").value).toFixed(2)
 
   const newTR = document.createElement("tr")
 
